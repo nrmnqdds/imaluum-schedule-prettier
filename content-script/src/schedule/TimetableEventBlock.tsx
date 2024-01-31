@@ -49,8 +49,8 @@ export default function TimetableEventBlock({
       }}
       onClick={() => onClick(event)}
     >
-      <p className="text-[8px] md:text-xs font-bold">{event.courseCode}</p>
-      <p className="text-[8px] md:text-xs md:font-bold">
+      <p className="text-sm md:text-lg font-bold">{event.courseCode}</p>
+      <p className="text-sm md:text-lg md:font-bold">
         {moment(event.timestamps[0].start, "HH:mm:ss").format("h:mma")} -{" "}
         {moment(event.timestamps[0].end, "HH:mm:ss").format("h:mma")}
       </p>

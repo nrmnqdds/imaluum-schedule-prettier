@@ -18,7 +18,7 @@ export default function TimetableWeekDays({
             className="flex-1 h-full
               flex flex-col items-center justify-center"
           >
-            <p className="text-foreground text-xs font-bold">{day}</p>
+            <p className="text-foreground text-lg font-bold">{day}</p>
           </div>
         ))}
       </div>

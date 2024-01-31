@@ -53,13 +53,13 @@ export default function TimetableModal({
                     {currentSubject?.courseCode}
                   </Dialog.Title>
                   <div className="mt-0">
-                    <p className="text-sm text-zinc-800">
+                    <p className="text-lg text-zinc-800">
                       {currentSubject?.courseName}
                     </p>
                   </div>
                   <div className="flex flex-col gap-1 items-start mt-5">
-                    <p className="text-sm text-zinc-800">
-                      <span className="text-sm text-zinc-900 font-bold">
+                    <p className="text-lg text-zinc-800">
+                      <span className="text-lg text-zinc-900 font-bold">
                         Time:{" "}
                       </span>
                       {moment(
@@ -72,26 +72,26 @@ export default function TimetableModal({
                         "HH:mm:ss"
                       ).format("h:mma")}
                     </p>
-                    <p className="text-sm text-zinc-800">
-                      <span className="text-sm text-zinc-900 font-bold">
+                    <p className="text-lg text-zinc-800">
+                      <span className="text-lg text-zinc-900 font-bold">
                         Lecturer:{" "}
                       </span>
                       {currentSubject?.lecturer}
                     </p>
-                    <p className="text-sm text-zinc-800">
-                      <span className="text-sm text-zinc-900 font-bold">
+                    <p className="text-lg text-zinc-800">
+                      <span className="text-lg text-zinc-900 font-bold">
                         Section:{" "}
                       </span>
                       {currentSubject?.section}
                     </p>
-                    <p className="text-sm text-zinc-800">
-                      <span className="text-sm text-zinc-900 font-bold">
+                    <p className="text-lg text-zinc-800">
+                      <span className="text-lg text-zinc-900 font-bold">
                         Credit Hour:{" "}
                       </span>
                       {currentSubject?.chr}
                     </p>
-                    <p className="text-sm text-zinc-800">
-                      <span className="text-sm text-zinc-900 font-bold">
+                    <p className="text-lg text-zinc-800">
+                      <span className="text-lg text-zinc-900 font-bold">
                         Location:{" "}
                       </span>
                       {currentSubject?.venue}
@@ -101,7 +101,7 @@ export default function TimetableModal({
                 <div className="mt-5 sm:mt-6">
                   <button
                     type="button"
-                    className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-lg font-semibold text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     onClick={() => setOpenModal(false)}
                   >
                     Exit
