@@ -16,7 +16,7 @@ export default function TimetableRow({
       <div className="absolute left-0 w-12 h-full flex flex-col items-center justify-start border-r border-border bg-card">
         {showHour && (
           <p
-            className="text-foreground text-lg font-bold mt-1
+            className="text-foreground text-sm font-bold mt-1
           -translate-y-1/2 pb-2"
           >
             {hour > 12 ? hour - 12 : hour} {hour > 11 ? "PM" : "AM"}

@@ -1,18 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "React Content Script",
+  "name": "i-Ma'luum Schedule Prettier",
   "version": "1.0.0",
   "action": {
     "default_title": "Popup",
     "default_popup": "index.html",
-    "default_icon": "logo192.png"
+    "default_icon": "logo.png"
   },
-  "icons": {},
+ "icons": {
+    "128": "logo.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://imaluum.iium.edu.my/MyAcademic/schedule", "https://imaluum.iium.edu.my/MyAcademic/schedule?ses=*"],
       "js": ["content-script/src/main.tsx"],
       "media": []
     }
-  ]
+  ],
+  "author": "qagura@protonmail.com",
+  "homepage_url": "https://github.com/qryskalyst20",
+  "version_name": "1.0 beta"
 }
