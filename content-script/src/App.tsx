@@ -1,17 +1,22 @@
 /// <reference types="chrome" />
 /// <reference types="vite-plugin-svgr/client" />
 
-import Logo from "./Logo";
-import "./App.css";
+import { useEffect, useState } from "react";
+import { scrapeTableData } from "./lib/schedule-scraper";
+import Timetable from "./schedule";
 
 function App() {
+  const [tableData, setTableData] = useState([]);
+
+  useEffect(() => {
+    const scrapedData = scrapeTableData();
+    if (!scrapedData) return;
+    setTableData(scrapedData);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <Logo className="App-logo" id="App-logo" title="React logo" />
-        <p>Hello, World!</p>
-        <p>I'm a Chrome Extension Content Script!</p>
-      </header>
+    <div className="flex-1 min-h-screen w-full">
+      <Timetable events={tableData || []} />
     </div>
   );
 }

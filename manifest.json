@@ -10,7 +10,7 @@
   "icons": {},
   "content_scripts": [
     {
-      "matches": ["https://blank.org/*"],
+      "matches": ["https://imaluum.iium.edu.my/MyAcademic/schedule", "https://imaluum.iium.edu.my/MyAcademic/schedule?ses=*"],
       "js": ["content-script/src/main.tsx"],
       "media": []
     }
