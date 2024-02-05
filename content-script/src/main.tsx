@@ -1,9 +1,9 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import "./main.css";
 import App from "./App";
+import "./main.css";
 
-const table = document.querySelector(".box-body table.table.table-hover");
+const table = document.querySelector(".box-body");
 
 document.documentElement.classList.add("dark");
 
@@ -18,21 +18,29 @@ app.id = "root";
 // Also control when the content script is injected from the manifest.json:
 // https://developer.chrome.com/docs/extensions/mv3/content_scripts/#run_time
 if (table) {
-  const table = document.querySelector(
-    ".box-body table.table.table-hover"
-  ) as HTMLTableElement;
-  table.style.display = "none";
-  table.parentNode?.insertBefore(app, table);
+	const table = document.querySelector(
+		".box-body table.table.table-hover",
+	) as HTMLTableElement;
+	table.style.display = "none";
+	table.parentNode?.insertBefore(app, table);
 }
 
 const container = document.getElementById("root");
 container.style.width = "100%";
 container.style.maxWidth = "100%";
+container.style.height = "100%";
 container.style.overflowX = "hidden";
+container.style.flexGrow = "1";
+container.style.flex = "1";
+container.style.display = "flex";
+container.style.flexDirection = "column";
+container.style.justifyContent = "center";
+container.style.alignItems = "center";
+container.style.position = "relative";
 const root = createRoot(container!);
 
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>,
 );
